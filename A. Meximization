@@ -1,0 +1,20 @@
+t = int(input())
+
+for i in range(t):
+    n = int(input())
+    a = list(map(int, input().split()))
+
+    a.sort()
+
+    first = []
+    duplicate = []
+
+    for x in a:
+        if x not in first:
+            first.append(x)
+        else:
+            duplicate.append(x)
+
+    ans = first + duplicate
+
+    print(*ans)
